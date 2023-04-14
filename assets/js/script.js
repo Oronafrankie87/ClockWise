@@ -40,6 +40,8 @@ function usePlanner() {
 }
 
 
+
+//Call functions
 timeBlockColor();
 usePlanner();
 
