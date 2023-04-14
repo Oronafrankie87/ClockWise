@@ -1,13 +1,19 @@
 var saveBtn = $(".saveBtn"); //Select & store all DOM elements with class name saveBtn in this variable with same name
 
-$("#currentDay").text(moment().format("dddd MMMM Do YYYY [at] hh:mm:ss a"));
-//The current day and time is displayed at the top of the page under the title and above the calendar
+$("#currentDay").text(dayjs().format("dddd MMMM D YYYY"));
+// The current day and is displayed at the top of the page under the title and above the calendar
 
+
+//Time block  function
 function timeBlockColor() {
-  var currentHour = Daysjs().hour();
+  var currentHour = dayjs().hour();
+  // console.log(currentHour)
   $(".time-block").each(function () {
     var blockHour = parseInt($(this).attr("id"));
-
+    // console.log(blockHour)
+    //If the block hour is greater than current hour it is future
+    //Else if the block hour is equal to the current hour it is present
+    //Else it is the past
     if (blockHour > currentHour) {
       $(this).addClass("future");
     } else if (blockHour === currentHour) {
@@ -18,26 +24,31 @@ function timeBlockColor() {
   });
 }
 
+
 //Save button clicked and text for the event is saved in local storage
 saveBtn.on("click", function () {
-
-  var time = $(this).siblings(".hour").text();
+  console.log("hello");
+  var time = $(this).parent(".time-block").attr("id");
   var plan = $(this).siblings(".plan").val();
+  console.log(time)
+  console.log(plan)
 
   localStorage.setItem(time, plan);
+  
 });
 
 
 //Saved text is still on the page when refreshed
 function usePlanner() {
-  $(".hour").each(function () {
-    var currHour = $(this).text();
+  $(".time-block").each(function () {
+    var currHour = $(this).attr("id");
     var currPlan = localStorage.getItem(currHour);
     if (currPlan !== null) {
       $(this).siblings(".plan").val(currPlan);
     }
   });
 }
+
 
 
 
