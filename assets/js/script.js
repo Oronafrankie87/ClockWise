@@ -18,6 +18,42 @@ function timeBlockColor() {
   });
 }
 
+//Save button clicked and text for the event is saved in local storage
+saveBtn.on("click", function () {
+
+  var time = $(this).siblings(".hour").text();
+  var plan = $(this).siblings(".plan").val();
+
+  localStorage.setItem(time, plan);
+});
+
+
+//Saved text is still on the page when refreshed
+function usePlanner() {
+  $(".hour").each(function () {
+    var currHour = $(this).text();
+    var currPlan = localStorage.getItem(currHour);
+    if (currPlan !== null) {
+      $(this).siblings(".plan").val(currPlan);
+    }
+  });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
