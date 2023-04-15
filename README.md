@@ -16,9 +16,16 @@ Easy to Use: ClockWise features a clean and intuitive interface that makes it ea
 Try ClockWise today and experience the convenience of a simple and efficient work day scheduling app that saves your tasks locally using localStorage. Stay organized and make the most of your work day with ClockWise! 
 
 ##Table of Content 
+-Page Image and link
 -Built with 
 -Attributes and Acknowledgements
 -License
+
+![Getting Started](./assets/images/Webpage%20screen%20capture.png)
+
+https://oronafrankie87.github.io./ClockWise/
+
+
 
 ##Build with 
   This Work day Schedule was built with HTML, CSS and JavaScript
