@@ -27,24 +27,25 @@ function timeBlockColor() {
 
 //Save button clicked and text for the event is saved in local storage
 saveBtn.on("click", function () {
-  console.log("hello");
+  // console.log("hello");
   var time = $(this).parent(".time-block").attr("id");
   var plan = $(this).siblings(".plan").val();
   console.log(time)
   console.log(plan)
-
+  
   localStorage.setItem(time, plan);
+  $(this).siblings("plan").val(plan);
   
 });
 
 
 //Saved text is still on the page when refreshed
-function usePlanner() {
+function retrieveSavedData() {
   $(".time-block").each(function () {
     var currHour = $(this).attr("id");
     var currPlan = localStorage.getItem(currHour);
     if (currPlan !== null) {
-      $(this).siblings(".plan").val(currPlan);
+      $(this).find(".plan").val(currPlan);
     }
   });
 }
@@ -54,7 +55,7 @@ function usePlanner() {
 
 //Call functions
 timeBlockColor();
-usePlanner();
+retrieveSavedData();
 
 
 
