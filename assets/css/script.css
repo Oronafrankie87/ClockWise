@@ -64,7 +64,7 @@ textarea {
 
 @media screen and (min-width: 700px) {
   #currentDay {
-    width: 300px
+    width: 300px;
     font-size: 10px !important;
   }
 }
