@@ -62,4 +62,17 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
+@media screen and (min-width: 700px) {
+  #currentDay {
+    width: 300px
+    font-size: 10px !important;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  #currentDay {
+    width: 1000px;
+    font-size: 20px !important;
+  }
+}
 
