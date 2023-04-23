@@ -31,7 +31,7 @@ https://oronafrankie87.github.io./ClockWise/
   This Work day Schedule was built with HTML, CSS and JavaScript
 
 ##Attributes and Acknowledgments
-  This app was started by the UT Austin bootcamp and and finished by Francisco Orona.  Help was given to understand the functions by Jacob Nordan.  Additional assistance was provided by Negin, TA from UT Austin bootcamp.
+  This app was started by the UT Austin bootcamp and and finished by Francisco Orona.  Help was given to understand the functions by Jacob Nordan.  Additional assistance was provided by Negin, TA from UT Austin bootcamp.  ChatGPT was used to fix other issues and to cement how each part works.
 
  ##License
   This work day Schedule has a MIT license. 

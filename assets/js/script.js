@@ -3,7 +3,7 @@ var saveBtn = $(".saveBtn"); //Select & store all DOM elements with class name s
 $("#currentDay").text(dayjs().format("dddd MMMM D YYYY"));
 // The current day and is displayed at the top of the page under the title and above the calendar
 
-
+//The following code was written with the help of a tutor, google and a bootcamp TA.  It was later put through Chatgpt to deconstruct it and learn how it works. lines 7-51.
 //Time block  function
 function timeBlockColor() {
   var currentHour = dayjs().hour();
